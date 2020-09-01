@@ -7,8 +7,8 @@ const User = require('../models/User');
 const jwt = require('jsonwebtoken');
 //email request
 const mailgun = require("mailgun-js");
-const DOMAIN = 'https://api.mailgun.net/v3/sandboxf86c7839c8814a589689a58a1563de67.mailgun.org';
-const mg = mailgun({ apiKey: "391bc80364531fbc95d6e286b646288e-7cd1ac2b-71af1274", domain: DOMAIN });
+const DOMAIN = '';
+const mg = mailgun({ apiKey: "", domain: DOMAIN });
 
 
 
@@ -92,18 +92,18 @@ router.post('/register', (req, res) => {
                     to: email,
                     subject: 'BerymoChat Verification Link',
                     html: `
-             <h2>Hello user welcome to Berymo-Chat! Please click on
-            given activate-link to verify your email. (^_^ )</h2>
-            <p>${process.env.CLIENT_URL}/authentication/activate/${token}</p>
-           `
+                      <h2>Hello user welcome to Berymo-Chat! Please click on
+                      given activate-link to verify your email. (^_^ )</h2>
+                      <p>${process.env.CLIENT_URL}/authentication/activate/${token}</p>
+                    `
                   };
                   mg.messages().send(data, function (error, body) {
-                    /* if (error) {
-                      return res.json({
+                    if (error) {
+                      return res.status(400).json({
                         message: error.message
                       })
-                    } */
-                    //return res.json({ messages: 'Email has been sent, kindly activate your account (^_^ )' });
+                    }
+                    return res.status(200).json({ messages: 'Email has been sent, kindly activate your account (^_^ )' });
 
                   });
 
