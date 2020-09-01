@@ -1,0 +1,29 @@
+<div class="row mt-5">
+	<div class="col-md-6 m-auto">
+		<div class="card card-body text-center">
+			<h1> WELCOME</h1>
+			<h1><i class="fas fa-spinner"></i> BERYMO<span style="color:#d9534f">C</span>HAT</h1>
+			<!-- tek bir harf rengi değiştirirken  -->
+			<p>Create an account or login</p>
+			<a href="/users/register" class="btn btn-primary btn-block mb-2">Register</a>
+			<a href="/users/login" class="btn btn-secondary btn-block">Login</a>
+			<script type="text/javascript">
+				const buttons = document.querySelectorAll('btn');
+				buttons.forEach(btn => {
+					btn.addEventListener('mouseenter', function (e) {
+						let x = e.clientX - e.target.offsetLeft;
+						let y = e.clientY - e.target.offsetTop;
+
+						let ripples = document.createElement('span');
+						ripples.style.left = x + 'px';
+						ripples.style.top = y + 'px';
+						this.appendChild(ripples);
+
+						setTimeout(() => {
+							ripples.remove()
+						}, 1000);
+					})
+				}) </script>
+		</div>
+	</div>
+</div>

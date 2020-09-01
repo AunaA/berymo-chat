@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	 
+ 
+
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+		integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+	<link rel="stylesheet" href="/css/style.css" />
+
+   <title>BerymoChat </title>
+	<h1 class="mt-4">BerymoChat</h1>
+	
+	<a href="/users/logout" class="btn btn-secondary">Logout</a>
+	<a href="/users/profile" class="btn btn-secondary">Profile</a>
+	<a href="/users/to-do-list" class="btn btn-secondary">To-do-List</a>
+	<a href="/users/notes" class="btn btn-secondary">Notes</a>
+
+	<title>BerymoChat App</title>
+</head>
+
+<body>
+	<div class="join-container">
+		<header class="join-header">
+			<h1><i class="fas fa-spinner"></i> BerymoChat</h1>
+			<h1 style="color: <% if(user.position == 'authorized') { %>red<% } else { %>blue<% } %>"><%= user.firstname %> <%= user.lastname %></h1>
+		</header>
+		
+		<main class="join-main">
+			<form action="/chatpage/berymoChat/chat">
+
+				<!--<div class="form-control">
+					<label for="username">Username</label>
+					                                      ayrı bişi- >      <p class="lead mb-3">Welcome <%= user.name %></p>
+
+					<input type="text" name="username" id="username" placeholder="Enter username..." required />
+				</div>--->
+
+				<div class="form-control">
+					<label for="room">Room</label>
+					<select name="room" id="room">
+						<option value="Meeting">Meeting</option>
+						<option value="To-do list">To-do list</option>
+						<option value="Private">Private</option>
+						<option value="Feedback">Feedback</option>
+						<option value="Frontend">Frontend</option>
+						<option value="Backend">Backend</option>
+					</select>
+					<input name="username" type="hidden" value="<%= user.firstname %>">
+				</div>
+				<button type="submit" class="btn">Join Chat</button>
+				</script>
+
+			</form>
+		</main>
+	</div>
+</body>
+
+</html>

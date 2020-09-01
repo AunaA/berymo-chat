@@ -1,0 +1,51 @@
+{
+  "name": "berymologinpassportsystem",
+  "version": "1.0.0",
+  "main": "aunaapp.js",
+  "scripts": {
+    "start": "node aunaapp.js",
+    "dev": "nodemon aunaapp.js"
+  },
+  "keywords": [
+    "chat-example"
+  ],
+  "author": "AUNA",
+  "license": "ISC",
+  "description": " deneme 1",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "bootstrap": "^4.5.2",
+    "chat-example": "0.0.1",
+    "connect-flash": "^0.1.1",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "express-ejs-layouts": "^2.5.0",
+    "express-jwt": "^6.0.0",
+    "express-session": "^1.17.1",
+    "express-validator": "^6.6.1",
+    "flash": "^1.1.0",
+    "http": "0.0.1-security",
+    "jsonwebtoken": "^8.5.1",
+    "mailgun-js": "^0.22.0",
+    "moment": "^2.27.0",
+    "mongoose": "^5.10.0",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0",
+    "path": "^0.12.7",
+    "session": "^0.1.0",
+    "socket.io": "^2.3.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TheLastCodeBenders/socketio-chat-example.git"
+  },
+  "bugs": {
+    "url": "https://github.com/TheLastCodeBenders/socketio-chat-example/issues"
+  },
+  "homepage": "https://github.com/TheLastCodeBenders/socketio-chat-example#readme"
+}
